@@ -11,20 +11,20 @@
             HorizontalOptions="Center"
             VerticalOptions="Center">
 
-            <Label 
+            <Label
                 Text="Hotel MAUI"
                 FontSize="28"
                 FontAttributes="Bold"
                 TextColor="White"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"/>
 
-            <Label 
+            <Label
                 Text="Bem-vindo ao aplicativo!"
                 FontSize="18"
                 TextColor="LightGray"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"/>
 
-            <Button 
+            <Button
                 x:Name="BtnHospedagem"
                 Text="Ir para Contratação de Hospedagem"
                 BackgroundColor="#FFD84D"
@@ -32,9 +32,19 @@
                 CornerRadius="10"
                 Clicked="BtnHospedagem_Clicked"
                 WidthRequest="280"
-                HeightRequest="50" />
+                HeightRequest="50"/>
 
-            <Button 
+            <Button
+                Text="Minhas Reservas"
+                BackgroundColor="#FFD84D"
+                TextColor="Black"
+                CornerRadius="10"
+                WidthRequest="280"
+                HeightRequest="50"
+                Clicked="OnMinhasReservasClicked"/>
+
+
+            <Button
                 x:Name="BtnSobre"
                 Text="Sobre"
                 BackgroundColor="#4B0082"
@@ -42,7 +52,7 @@
                 CornerRadius="10"
                 Clicked="BtnSobre_Clicked"
                 WidthRequest="280"
-                HeightRequest="50" />
+                HeightRequest="50"/>
 
         </VerticalStackLayout>
     </ScrollView>

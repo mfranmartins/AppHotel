@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.MinhasReservas"
+             Title="Minhas Reservas"
+             BackgroundColor="#1A1A1A">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            
+            <Label Text="Minhas Reservas"
+                   FontFamily="Kalam"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#FFD84D" />
+
+            <CollectionView x:Name="lstReservas"
+                            ItemsSource="{Binding listaDeReservas}"
+                            SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="15"
+                               Padding="15"
+                               Margin="0,5"
+                               BackgroundColor="#333333"
+                               HasShadow="True">
+                            <VerticalStackLayout Spacing="5">
+                                <Label Text="{Binding Suite.Nome}"
+                                       TextColor="#FFD84D"
+                                       FontAttributes="Bold"
+                                       FontSize="18"/>
+                                <Label Text="{Binding Adultos, StringFormat='Adultos: {0}'}"
+                                       TextColor="White"/>
+                                <Label Text="{Binding Criancas, StringFormat='Crianças: {0}'}"
+                                       TextColor="White"/>
+                                <Label Text="{Binding Diarias, StringFormat='Diárias: {0}'}"
+                                       TextColor="White"/>
+                                <Label Text="{Binding Total, StringFormat='Total: R$ {0:F2}'}"
+                                       TextColor="#FFD84D"
+                                       FontAttributes="Bold"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
