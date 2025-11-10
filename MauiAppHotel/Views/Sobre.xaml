@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre o App">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Aplicativo de Hotel"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Versão: 1.0.0"
+                   FontSize="16"
+                   TextColor="#555" />
+
+            <Label Text="Desenvolvido por: Fran Martins"
+                   FontSize="16"
+                   TextColor="#555" />
+
+            <Label Text="Este aplicativo foi criado para gerenciar a contratação de hospedagens, com foco em praticidade e interface moderna."
+                   FontSize="16"
+                   TextColor="#444"
+                   LineBreakMode="WordWrap" />
+
+            <Button Text="Voltar"
+                    BackgroundColor="#6C63FF"
+                    TextColor="White"
+                    CornerRadius="20"
+                    Clicked="Voltar_Clicked"
+                    Margin="0,20,0,0" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
